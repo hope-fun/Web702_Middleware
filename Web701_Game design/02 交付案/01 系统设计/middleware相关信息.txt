@@ -1,0 +1,22 @@
+1.middleware主域名:
+http://ih5hi.com/
+
+2.游戏服务器住域名：
+h5bar.com香港
+http://www.luckywings.net/game/hXXX/ 大陆
+http://www.luckywings.net/game/h010/
+
+3.提供给平台的游戏地址示例：
+http://ih5hi.com?game=1&channel=13
+
+4.提供给平台的支付回调地址：
+http://ih5hi.com/pay/
+
+5.需要cp提供游戏访问地址：
+？？？？？？？
+
+6.需要cp提供支付回调地址：
+？？？？？？？
+
+（相关数据格式待定）
+

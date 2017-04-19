@@ -1,0 +1,21 @@
+channel文件svn路径:
+hopefun\Web702_Middleware\Web708_Code_Server\trunk\mobigame-login-service\src\main\webapp\resources\js\channel
+
+channelId对应渠道：
+1--魔方网（未接入）
+2--9G SDK
+3--Play68 SDK
+4--JinWan SDK（未接入）改->润趣微信平台
+5--多禾(钱宝H5)二月兰 SDK
+6--美图秀秀Forgame SDK
+7--MyCard SDK（未接入）
+8--淘米就醬玩 SDK（未接入）
+9--jy SDK
+10--Y5平台
+11--群黑
+12--火舞
+13--nicegame（接入中）
+14--gametree（接入中）
+666--IOS
+777--Android（未接入）
+888--快速登录

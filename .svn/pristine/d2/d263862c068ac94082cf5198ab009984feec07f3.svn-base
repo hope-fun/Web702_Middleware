@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mobigame.projects.version>1.0.0</mobigame.projects.version>
+	</properties>
+
+	<groupId>net.luckywings.mobigame</groupId>
+	<artifactId>mobigame-projects</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>mobigame-projects</name>
+
+	<modules>
+		<module>mobigame-framework</module>
+		<module>mobigame-cas-service</module>
+		<module>mobigame-cas-service-interface</module>
+        <module>mobigame-login-service</module>
+        <module>mobigame-pay-service</module>
+
+        <!--<module>mobigame-account-service</module>-->
+		<!--<module>mobigame-h005</module>-->
+		<!--<module>mobigame-h006</module>-->
+		<!-- <module>mobigame-h007</module>-->
+		<!-- <module>mobigame-h008</module>-->
+		<!-- <module>mobigame-h009</module>-->
+		<!--<module>mobigame-h010</module>-->
+		 <!--<module>mobigame-h011</module>-->
+		  <!--<module>mobigame-h601</module>-->
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.14.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<showWarnings>true</showWarnings>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.4.2</version>
+					<configuration>
+						<skip>${maven.test.skip}</skip>
+						<useFile>false</useFile>
+					</configuration>
+					<executions>
+						<execution>
+							<phase>test</phase>
+							<goals>
+								<goal>test</goal>
+							</goals>
+							<configuration>
+								<skip>${maven.test.skip}</skip>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<outputDirectory>../dist</outputDirectory>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.3</version>
+					<configuration>
+						<webResources>
+							<resource>
+								<!-- this is relative to the pom.xml directory -->
+								<directory>src/main/webapp</directory>
+							</resource>
+						</webResources>
+						<outputDirectory>dist</outputDirectory>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<profiles.active>dev</profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<profiles.active>prod</profiles.active>
+			</properties>
+		</profile>
+	</profiles>
+</project>

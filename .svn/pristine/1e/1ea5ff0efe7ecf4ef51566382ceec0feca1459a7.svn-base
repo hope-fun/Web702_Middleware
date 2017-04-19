@@ -1,0 +1,667 @@
+/*******************************************************************************
+ * LUCKYWINGS PROPRIETARY INFORMATION
+ *  
+ * The information contained herein is proprietary to LuckyWings and shall not be reproduced or
+ * disclosed in whole or in part or used for any design or manufacture without direct written
+ * authorization from LuckyWings.
+ *
+ * Copyright (c) 2016 by LuckyWings. All rights reserved.
+ *******************************************************************************/
+package net.luckywings.mobigame.server.model.enumtype;
+
+/**
+ * 数据库枚举类型定义
+ * 
+ * @ClassName: EnumFieldPjz
+ * @author zhang.kun
+ * @date 2014-6-5
+ */
+
+public enum EnumFieldPjz {
+
+	// Common 0 - 99
+	NONE(0, "类型为空"),
+	SERVER_ALL(1,"所有服务"),
+	SERVER_IOS(2,"苹果"),
+	SERVER_ANDROID(3,"安卓"),
+	
+	// 武将 200 - 299	
+	CARD_GENDER_MALE(200,"男"),
+	CARD_GENDER_FEMALE(201,"女"),
+	CARD_GENDER_OTHER(202,"其他"),
+	CARD_CAMP_WEI(210,"魏"),
+	CARD_CAMP_SHU(211,"蜀"),
+	CARD_CAMP_WU(212,"吴"),
+	CARD_CAMP_QUN(213,"群"),
+	CARD_TYPE_ATTACK(220,"攻击型"),
+	CARD_TYPE_SPEED(221,"敏捷型"),
+	CARD_TYPE_MIND(222,"智慧型"),
+	CARD_TYPE_BALANCE(223,"平衡型"),
+	CARD_ATTACK_THROUGH(230,"穿刺"),
+	CARD_ATTACK_BOUNCE(231,"反弹"),
+	CARD_ARMS_CAVALRY(240,"骑兵"),
+	CARD_ARMS_INFANTRY(241,"步兵"),
+	CARD_ARMS_ARCHER(242,"弓兵"),
+	CARD_ARMS_GOD(243,"神"),
+	CARD_ARMS_GHOST(244,"鬼"),
+	
+	CARD_IDENTITY_JIANGMEN(250,"将门"),
+	CARD_IDENTITY_MINGMEN(251,"名门"),
+	CARD_IDENTITY_YINSHI(252,"隐士"),
+	CARD_IDENTITY_FUHAO(253,"富豪"),
+	CARD_IDENTITY_HUANGYI(254,"皇裔"),
+	CARD_IDENTITY_DAOFEI(255,"盗匪"),
+	CARD_IDENTITY_MANYI(256,"蛮夷"),
+	CARD_IDENTITY_XIANREN(257,"仙人"),
+	CARD_IDENTITY_HUANGJIN(258,"黄巾"),
+	
+	CARD_PROP_OPEN_DEFAULT(259,"默认开启"),
+	CARD_PROP_OPEN_PVP_POINT(260,"PVP点数开启"),
+	CARD_PROP_OPEN_EVOLVE(261,"进化开启"),
+	
+	CARD_PROP_TYPE_ATTACK(262,"攻击"),
+	CARD_PROP_TYPE_SPEED(263,"速度"),
+	CARD_PROP_TYPE_HP(264,"HP"),
+	
+	
+	// 装备 300 - 399
+	EQPT_WEAR_HAT(300,"帽子"),
+	EQPT_WEAR_JEWELRY(301,"饰品"),
+	EQPT_WEAR_WEAPON(302,"武器"),
+	EQPT_WEAR_CLOTHES(303,"衣服"),
+	EQPT_WEAR_SHOES(304,"鞋"),
+	EQPT_WEAR_MOUNT(305,"坐骑"),
+	EQPT_TYPE_HP(310,"生命"),
+	EQPT_TYPE_ATTACK(311,"攻击"),
+	EQPT_TYPE_SPEED(312,"速度"),
+	EQPT_TYPE_ALL(312,"全部"),
+	EQPT_SPLIT_ON(320,"可炼化"),
+	EQPT_SPLIT_OFF(321,"不可炼化"),
+	EQPT_SUIT_ADD_HP(330,"生命"),
+	EQPT_SUIT_ADD_ATTACK(331,"攻击"),
+	EQPT_SUIT_ADD_SPEED(332,"速度"),
+	EQPT_SUIT_ADD_ALL(333,"全部"),
+	
+	// 征战400-450
+	/**子关卡等级 */
+	SCENE_LEVEL_COMMON(400, "子关卡_普通"),
+	SCENE_LEVEL_ELITE(401, "子关卡_精英"),
+	SCENE_LEVEL_BOSS(402, "子关卡_BOSS"),
+	
+	/**关卡类型 */
+	SCENE_TYPE_COMMON(403, "普通关卡"),
+	SCENE_TYPE_BIOGRAPHY(404, "精英关卡"),
+	SCENE_TYPE_MANY_PEOPLE_WAR(404, "多人战役关卡"),
+	SCENE_TYPE_PASS(405, "通关"),
+	SCENE_TYPE_ACTIVITY(410, "活动副本"),
+	SCENE_TYPE_NOVICE(411,"新手引导"),
+
+	
+	SCENE_TYPE_EXPLORE(406, "探索"),
+	PASS_SCENE_REWARD_STATUS_NO(407, "通关未领取"),
+	PASS_SCENE_REWARD_STATUS_OK(408, "通关已领取"),
+	PASS_SCENE_REWARD_STATUS_UNPASS(409, "未通关"),
+	
+	// 挑战奖励类型 451-461
+	CHANLLENGE_REWARD_TYPE_BREAK(451,"突破排名"),
+	
+	CHANLLENGE_REWARD_TYPE_DAILY(452,"每日奖励"),
+	// 突破排名 领取状态 470--475
+	BREAK_REWARD_STATUS_OK(470,"已领取"),
+	BREAK_REWARD_STATUS_NO(471,"未领取"),
+	BREAK_REWARD_STATUS_UNRECHIVEMENT(472,"未达成"),
+	//兑换 类型 476--486
+	EXCHANGE_TIMES_TYPE_FOREVER(476,"交换次数类型_永久"),
+	EXCHANGE_TIMES_TYPE_DAILY(477,"交换次数类型_每日"),
+
+	
+	
+	//奖励类型500-550
+	REWARD_TYPE_CARD(501,"卡牌奖励"),
+	REWARD_TYPE_CARDCHIP(502,"卡牌碎片奖励") ,
+	REWARD_TYPE_EQUIPMENT(503,"装备奖励") ,
+	REWARD_TYPE_EQUIPMENTCHIP (504,"装备碎片奖励"),
+	REWARD_TYPE_PROP (505,"道具奖励"),
+	REWARD_TYPE_GCOIN (507,"金币奖励"),
+	REWARD_TYPE_SCOIN (508,"银币奖励"),
+	REWARD_TYPE_MINERAL (509,"矿石奖励"),
+	REWARD_TYPE_PVP_POINT(510, "功勋点数"),
+	REWARD_TYPE_MS(511,"奖励类型名声"),
+	//道具类型551-650
+	PROP_TYPE_SEAL_PQHF(551,"骠骑虎符"),	
+	PROP_TYPE_SEAL_JJDY(552,"禁军大印"),	
+	PROP_TYPE_SEAL_DJJY(553,"大将军印"),	
+	PROP_TYPE_SEAL_CGYX(554,"传国玉玺"),	
+	PROP_TYPE_GBOX(555,"黄金宝箱"),	
+	PROP_TYPE_GKEY(556,"黄金钥匙"),
+	PROP_TYPE_SBOX(557,"白银宝箱"),
+	PROP_TYPE_SKEY(558,"白银钥匙"),
+	PROP_TYPE_CBOX(559,"青铜宝箱"),
+	PROP_TYPE_CKEY(560,"青铜钥匙"),
+	PROP_TYPE_PHYSICAL_BIG(561,"体力丹(大)"),
+	PROP_TYPE_PHYSICAL_MID(562,"体力丹(中)"),
+	PROP_TYPE_PHYSICAL_SMALL(563,"体力丹(小)"),
+	PROP_TYPE_ENDURANCE_BIG(564,"耐力丹(大)"),
+	PROP_TYPE_ENDURANCE_MID(565,"耐力丹(中)"),
+	PROP_TYPE_ENDURANCE_SMALL(566,"耐力丹(小)"),
+	PROP_TYPE_PACKAGE(567,"礼包"),
+	PROP_TYPE_TOKEN(568,"黑市令"),
+	PROP_TYPE_PACKAGE_BIG(569,"大包"),
+	PROP_TYPE_PACKAGE_SMALL(570,"小包"),
+	PROP_USE_TYPE_DRIECT(649,"直接使用"),
+	PROP_USE_TYPE_INDRIECT(650,"非直接使用"),
+	PROP_TYPE_EXP_MID(571,"经验书(中)"),
+	PROP_TYPE_EXP_BIG(572,"经验书(大)"),
+	PROP_TYPE_EXP_SMALL(573,"经验书(小)"),
+	PROP_TYPE_CULTURE(574,"培养丹"),
+	PROP_TYPE_SPOILS(575,"一袋战利品"),
+	PROP_TYPE_SCOINS_MID(576,"一中堆银币"),
+	PROP_TYPE_SCOINS_BIG(577,"一大袋银币"),
+	PROP_TYPE_GCOINS_SMALL(578,"一小堆黄金"),
+	PROP_TYPE_GCOINS_MID(579,"一大袋黄金"),
+	PROP_TYPE_GCOINS_BIG(580,"一大箱黄金"),
+	PROP_TYPE_SCOINS_SMALL(581,"一小堆银币"),
+	PROP_TYPE_SKIP(582,"扫荡券"),
+	PROP_TYPE_REFRESH(583,"刷新令"),
+	
+	/** 展示类型 */
+	SHOW_TYPE_CARDCHIP(600,"卡牌碎片"),
+	SHOW_TYPE_CARD(601,"卡牌"),
+	SHOW_TYPE_EQUIPMENTCHIP(602,"装备碎片"),
+	SHOW_TYPE_SCOIN(603,"银两"),
+    SHOW_TYPE_PROP(604,"道具"),
+
+	
+	// 耐力 操作方式 651-660
+	ENDURANCE_GIVE(651,"赠送耐力"),
+	ENDURANCE_GET(652,"领取耐力"),
+	ENDURANCE_GIVE_AND_GET(653,"赠送并领取耐力"),
+	
+	// 耐力状态 665-670
+	ENDURANCE_STATUS_GIVE_OK(665,"已赠送"),
+	ENDURANCE_STATUS_GIVE_CANABLE(666,"可领取"),
+	ENDURANCE_STATUS_GET_OK(667,"已领取"),
+	ENDURANCE_STATUS_GET_CANABLE(668,"可领取"),
+	
+	// 走马灯
+	NOTICE_TYPE_SYSTEM_1(669,"公告_1"),
+	NOTICE_TYPE_SYSTEM_2(670,"公告_2"),
+	NOTICE_TYPE_TIPS(671,"日常公告"),
+//	NOTICE_TYPE_PLAYER(672,"玩家信息"),
+	
+	// 公告栏
+	NOTICE_TYPE_BOARD(673,"公告栏"),
+	
+	// 玩家信息
+	NOTICE_TYPE_RECRUIT(674,"招募牛X武将"),
+	NOTICE_TYPE_BOX_OPEN(675,"开启宝箱获得"),
+	NOTICE_TYPE_CARD_ADVANCED(676,"武将进阶成功"),
+	NOTICE_TYPE_EQUIPMENT_LEVEL_UP(678,"装备升级成功"),
+	NOTICE_TYPE_VIP_LEVEL_UP(679,"VIP等级提升"),
+	NOTICE_TYPE_TITLE_UP(680,"官爵提升 "),
+	NOTICE_TYPE_RANK_UP(681,"比武排名提升"),
+
+	
+	
+	//兑奖码690-720 
+	//使用次数限制，只有一次
+	Code_TYPE_USERLIMIT_ONECE(690,"只能使用一次"),
+	Code_TYPE_USERLIMIT_EVERY_ONECE(691,"每个人只能使用一次"),
+	Code_TYPE_USETYPE_ONE(692,"同一账号同一批次只能使用一次"),
+	Code_TYPE_USETYPE_TWO(693,"同一账号同一批次只能使用多次"),
+	Code_TYPE_USETYPE_THREE(694,"同一账号不同批次只能使用一个"),
+	CODE_CHANNEL_SNS(695,"SNS渠道"),
+	// 阵法环境
+	FORMATION_ENV_FLAMEWALL(1, "火焰墙"), 
+	FORMATION_ENV_DECELERATIONWALL(2, "减速墙"),
+
+	// 技能类型 被动 主动
+	SKILL_TYPE_PASSIVITY(3,"被动"),
+	SKILL_TYPE_INITIATIVE(4,"主动"),
+
+	// 技能范围枚举
+	SKILL_SCOPE_LINE_WIDE(5,"直线（粗）"),
+	SKILL_SCOPE_LINE_THIN(6,"直线（细）"),
+	SKILL_SCOPE_SELF_CIRCLE_MIDDLE(7,".自身为圆心（中）"),
+	SKILL_SCOPE_SELF_CIRCLE_BIG(8,".自身为圆心（大）"),
+	SKILL_SCOPE_SELF_TARGET_BIG(9,".目标为圆心（大）"),
+	SKILL_SCOPE_SINGLE_MOON(10,"单方向月牙形光波"),
+	SKILL_SCOPE_THIRDTEEN_DIRECTION(11,"十六向散射"),
+	SKILL_SCOPE_AREA_SMALL(12,".定点打击（区域小）"),
+	SKILL_SCOPE_AREA_MIDDLE(13,".定点打击（区域小）"),
+	SKILL_SCOPE_TRACK_PASS(14,"追踪打击跨越障碍 生命值最低，瞄准弱点"),
+	SKILL_SCOPE_TRACK_NOT_PASS(15,"追踪打击跨越障碍可被阻挡 生命值最低，瞄准弱点"),
+	SKILL_SCOPE_SIDELING_WIDE(16,"追踪打击可被阻挡 生命值最低，瞄准弱点"),
+	SKILL_SCOPE_SIDELING_THIN(17,"生命值最低，瞄准弱点"),
+
+	// 目标类型
+	SKILL_TARGET_ENEMY_SINGLE(18,"作用于敌方单体"),
+	SKILL_TARGET_ENEMY_ALL(19,"敌方全体"),
+	SKILL_TARGET_ENEMY_MANY(20,"敌方群体"),
+	SKILL_TARGET_SELF_ALL(21,"己方全体"),
+	SKILL_TARGET_SELF_SINGLE(22,"友方单体"),
+	SKILL_TARGET_SELF_MANY(23,"友方群体"),
+	SKILL_TARGET_WEI_ROLE(24,"魏势力角色"),
+	SKILL_TARGET_SHU_ROLE(25,"蜀势力角色"),
+	SKILL_TARGET_WU_ROLE(26,".吴势力角色"),
+	SKILL_TARGET_GROUP_ROLE(27,"群势力角色"),
+	SKILL_TARGET_MAN_ROLE(28,"男性角色"),
+	SKILL_TARGET_WOMAN_ROLE(29,"女性角色"),
+	SKILL_TARGET_FIRE_SERIES(30,"火系武将"),
+	SKILL_TARGET_WOOD_SERIES(31,"木系武将"),
+	SKILL_TARGET_WATER_SERIES(32,".水系武将"),
+	SKILL_TARGET_LIGHT_SERIES(33,"光系武将"),
+	SKILL_TARGET_DARK_SERIES(34,".暗系武将"),
+	SKILL_TARGET_RASH_BORN(35,"鲁莽相性"),
+	SKILL_TARGET_COOL_BORN(36,".冷静相性"),
+	SKILL_TARGET_NOBLY_BORN(37,"豪侠相性"),
+	SKILL_TARGET_FIDELITY_BORN(38,"鲁莽相性"),
+	SKILL_TARGET_ARBITRARY_BORN(39,"霸道相性"),
+	SKILL_TARGET_HUMANITY_BORN(40,"仁厚相性"),
+	SKILL_TARGET_BOSS(41,"BOSS"),
+	SKILL_TARGET_NOT_BOSS(42,"not BOSS"),
+
+	// 触发条件枚举
+	SKILL_TRIGGER_ENEMY_SINGLE(43,".每次攻击敌方单体释放"),
+	SKILL_TRIGGER_ENEMY_FIRST_SINGLE(44,".触碰到的第一个敌人释放"),
+	SKILL_TRIGGER_MOVE_INTERVAL(45,".移动中固定间隔时间释放"),
+	SKILL_TRIGGER_FRIEND_STRIKE_SELF(46,".被友军撞击释放"),
+	SKILL_TRIGGER_STRIKE_FRIEND(47,".撞击友军释放"),
+	SKILL_TRIGGER_EFFCT_IMMEDIATELY(48,".直接生效"),
+	SKILL_TRIGGER_HP_UP(49,".生命值百分比以上"),
+	SKILL_TRIGGER_HP_DOWN(50,".生命值百分比以下"),
+	SKILL_TRIGGER_NATIONALITY_WEI(51,".国别触发（魏）"),
+	SKILL_TRIGGER_NATIONALITY_WU(52,".国别触发（吴）"),
+	SKILL_TRIGGER_NATIONALITY_SHU(53,".国别触发（蜀）"),
+	SKILL_TRIGGER_NATIONALITY_GROUP(54,".国别触发（群）"),
+	SKILL_TRIGGER_MAN(55,".性别触发（男）"),
+	SKILL_TRIGGER_WOMAN(56,"..性别触发（女）"),
+	SKILL_TRIGGER_FIRE_SERIES(57,"火系武将"),
+	SKILL_TRIGGER_WOOD_SERIES(58,"木系武将"),
+	SKILL_TRIGGER_WATER_SERIES(59,".水系武将"),
+	SKILL_TRIGGER_LIGHT_SERIES(60,"光系武将"),
+	SKILL_TRIGGER_DARK_SERIES(61,".暗系武将"),
+
+	//商城需要货币类型
+//	MONEY_TYPE_WAGE(97,"工资"),
+//	MONEY_TYPE_SCOIN(98,"银币"),
+//	MONEY_TYPE_GCOIN(99,"黄金"),
+	// 货币类型
+	MONEY_GCOIN(100, "金币"),
+	MONEY_SCOIN(101, "银两"),
+	MONEY_CASH(102, "现金"),
+	PVP_POINT(103,"竞技点数"),
+	AP(104,"体力值"),
+	EXP(105,"经验值"),
+	REPUTATION(106,"名声"),
+	MONEY_MINERAL(107, "矿石"),
+	ENDURANCE(108, "耐力"),
+	MONEY_WAGE(109, "工资"),
+	
+
+	// Item Type, 关卡NPC
+	SCENE_ITEM_TYPE_S(109,"小将"),
+	SCENE_ITEM_TYPE_B(110,"大将"),
+	SCENE_ITEM_TYPE_D(113,"活动关卡大怪"),
+	SCENE_ITEM_TYPE_ASSIST(111,"副将"),
+	SCENE_ITEM_TYPE_ITEM(112,"物件"),
+	
+	// 掉落方式
+	DROP_SCENE(113,"关卡掉落"),
+	DROP_KILL(114,"击杀NPC掉落"),
+	
+	// 球的类型
+	BALL_BIG(115,"大球"),
+	BALL_MIDDLE(116,"中球"),
+	BALL_SMALL(117,"小球"),
+	
+	GENDER_MALE(118,"男"),
+	GENDER_REMALE(119,"女"),
+	GENDER_OTHER(120,"无"),
+	
+	CJ_TYPE_SHU(121,"传纪_蜀传"),
+	CJ_TYPE_WEI(121,"传纪_魏传"),
+	CJ_TYPE_WU(121,"传纪_吴传"),
+	CJ_TYPE_ZH(121,"传纪_诸侯传"),
+	
+	// 探索类型
+	EXPLORE_TYPE_JS(129,"加速探索"),
+	EXPLORE_TYPE_PT(130,"普通探索"),
+	EXPLORE_TYPE_DT(131,"地毯探索"),
+	
+	// 活动关卡类型
+//	SCENE_ACTIVITY_TYPE_DL(145,"关卡活动_掉落"),
+//	SCENE_ACTIVITY_TYPE_TL(146,"关卡活动_体力"),
+	
+	// 名声获取方式
+//	REPUTATION_FRIEND_SUPPORT(150,"好友支持"),
+//	REPUTATION_FRIEND_SPECIAL(151,"特殊好友支持"),
+//	REPUTATION_STRANGER(153,"陌生人"),
+	
+	REPUTATION_ADD_FRIEND(152,"增加好友"),
+	// 援军类型
+	REINFORCEMENTS_TYPE_FACEBOOK(154,"Facebook登录的好友"),
+	REINFORCEMENTS_TYPE_LINE(155,"Line登录的好友"),
+	REINFORCEMENTS_TYPE_OTHER(156,"其它方式登录的好友"),
+	REINFORCEMENTS_TYPE_STRANGER(157,"陌生人"),
+	
+	/** 好友状态 */
+	RELATION_APPLY(270, "申请"),
+	RELATION_REFUSED(271, "拒绝"),
+	RELATION_CONFIRM(272, "确定"),
+	
+	// 商城物品
+	GOODS_GRADE_TYPE_LOW(300,"低档商品"),
+	GOODS_GRADE_TYPE_MID(301,"中档商品"),
+	GOODS_GRADE_TYPE_HIGH(302,"高档商品"),
+	GOODS_TYPE_PROP(303,"道具"),
+	GOODS_TYPE_CARD(304,"卡牌"),
+	GOODS_TYPE_EQUIPMENT(328,"卡牌"),
+	GOODS_TYPE_MINERAL(329,"卡牌"),
+	GOODS_TYPE_CARDCHIP(330,"卡牌"),
+	GOODS_TYPE_EQUIPMENTCHIP(383,"卡牌"),
+	
+	SHOP_COUNT_TYPE_EVERYDAY(305,"每日购买次数限制"),
+	SHOP_COUNT_TYPE_PERPETUAL(306,"永久购买次数限制"),
+	SHOP_TYPE_COMMON(307,"普通商店"),
+	SHOP_TYPE_LEVEL(308,"等级商店"),
+	SHOP_TYPE_VIP(309,"VIP商店"),
+	SHOP_TYPE_SECRET(310,"神秘商店"),
+	
+	/** 购买次数限制类型 */
+	BUY_LIMIT_TYPE_EVERYDAY(310,"每天限制"),
+	BUY_LIMIT_TYPE_EVERYWEEK(311,"每周限制"),
+	BUY_LIMIT_TYPE_FOREVER(312,"众生限制"),
+	BUY_LIMIT_TYPE_CYCLE(313,"活动周期限制"),
+	
+	/** 关于展示条件的枚举 */
+	REACH_LEVEL_20(314,"等级达到20"),
+	REACH_VIP_LEVEL_1(315," VIP等级达到1"),
+	REACH_VIP_LEVEL_3(316," VIP等级达到3"),
+	RECHARGE_NEVER(317,"从未充值"),
+	RECHARGE_ALREADY(318," 已充过值"),
+	RECHARGE_NOT_TODAY(319,"今日未充值"),
+	RECHARGE_ALREADY_TODAY(320,"今日已充值"),
+	RECHARGE_ID_3_NEVER(321,"ID=3充值项从未充值"),
+    RECHARGE_ID_4_NEVER(322,"ID=4充值项从未充值"),
+    RECHARGE_ID_5_NEVER(323,"ID=5充值项从未充值"),
+    RECHARGE_ID_6_NEVER(324,"ID=6充值项从未充值"),
+    RECHARGE_ID_7_NEVER(325,"ID=7充值项从未充值"),
+    RECRUIT_ACTIVITY_BEGIN(326,"抽卡概率提升活动开启"),
+    SINGLE_RECHARGE_ACTIVITY_BEGIN(327,"单笔大额充值活动开启"),
+	
+	/** 331 - 350
+	 * 奖励事件
+	 */
+	TITLE_TYPE_REWARD(331, "官爵奖励"),
+	DAY_LOGIN_EVENT(332, "登录奖励事件"),
+	FIRST_RECHARGE_EVENT(333, "首冲奖励事件"),
+	
+	
+	
+	SERVER_NEW(354,"新服"),
+	SERVER_FULL(355,"爆满"),
+	SERVER_RECOMMEND(356,"推荐"),
+	SERVER_MAINTAIN(357,"维护"),
+	SERVER_HOT(358,"火爆"),
+	
+	/** 招募 360-365 */
+	RECRUIT_TYPE_SINGLE(360,"招募类型：单次"),
+	RECRUIT_TYPE_TEN(361,"招募类型： 十连招"),
+	COIN_TYPE_SCOIN(362,"币种类型： 银两抽卡"),
+	COIN_TYPE_GCOIN(363,"币种类型： 黄金抽卡"),
+	
+	/** VIP礼包 领取状态 370-375 */
+	VIP_PACKAGE_STATUS_OK(370,"已领取"),
+	VIP_PACKAGE_STATUS_NO(371,"未领取"),
+	VIP_PACKAGE_STATUS_UNACHIEVEMENT(372,"未达到"),
+	VIP_REWARD_TYPE_ONCE(373,"VIP奖励类型_一次性"),
+	VIP_REWARD_TYPE_DAILY(374,"VIP奖励类型_每日"),
+	
+//	ACT_REWARD_FB(375,"首充礼包活动"),
+	ACT_REWARD_FIRST_RECHARGE(376,"7天连续登陆活动"),
+	ACT_REWARD_SEVENDAYS(377,"7天连续登陆活动"),
+	
+//	FB_STATUS_OK(376,"首充礼包已领取"),
+//	FB_STATUS_NO(377,"首充礼包未领取"),
+//	FB_STATUS_UNACHIEVEMENT(378,"未达到"),
+	
+	PACKAGE_TYPE_VIP(379,"VIP礼包"),
+	PACKAGE_TYPE_FIRST_RECHARGE(380,"首冲礼包"),
+//	PACKATE_TYPE_7_CONTINUOUS_LOGIN(381,"7天连续登陆"),
+//	PACKATE_TYPE_LEVEL(382,"等级礼包"),
+	
+	
+	
+	
+	/**
+	 * 官爵奖励类型
+	 */
+//	REWARD_SCOIN(263, "官爵奖励银两"),
+//	REWARD_GCOIN(264, "官爵奖励黄金"),
+//	REWARD_TIPS_PACK(265, "官爵奖励锦囊"),
+//	REWARD_REPUTATION(266, "官爵奖励名声"),
+//	REWARD_FORMATIONINFO(268, "官爵奖励阵法"),
+//	REWARD_CARD(269, "官爵奖励卡牌"),
+	REWARD_STATUS_UNACIVEVMENT(263,""),
+	REWARD_STATUS_NO(264,""),
+	REWARD_STATUS_OK(265,""),
+	
+	
+	/**280-300
+	 * 发送对象过滤规则类型
+	 */
+	MAIL_FILTER_ALL(280,"所有玩家"),
+	MAIL_FILTER_LEVEL(281,"等级过滤玩家"),
+	MAIL_FILTER_LOGIN_CONTINUE(282,"连续登录过滤玩家"),
+	MAIL_FILTER_VIP_LEVEL(283,"VIP等级过滤玩家"),
+	MAIL_FILTER_VIP_LEVEL_LOGIN(283,"VIP等级过滤登陆玩家"),
+	MAIL_FILTER_PVP_DAY_RANK(288,"每天结算排名"),
+	MAIL_FILTER_PVP_RANK_BREAK(289,"排名突破"),
+	MAIL_FILTER_MONTHCARD(290,"月卡充值"),
+	MAIL_FILTER_GM(291,"GM工具添加的邮件"),
+	MAIL_FILTER_DAILY_RECHARGE_FIRST(292,"每日首冲"),
+	MAIL_FILTER_RECHARGE_FIRST(293,"首充"),
+	MAIL_FILTER_RECHARGE_GIVE(294,"充值赠送"),
+	MAIL_FILTER_EVERDAY_NEWSPAPER(293,"每日战报"),
+	
+	MAIL_RULER_EQUAL(284,"="),
+	MAIL_RULER_GREATER(285,">"),
+	MAIL_RULER_LESS(286,"<"),
+	MAIL_RULER_BETWEEN(287,"区间值"),
+	
+	/**首冲状态 */
+	FIRST_NONE(300,"没有充值"),
+	FIRST_OK(301,"充值未领奖"),
+	FIRST_ERROR(302,"充值已领奖"),
+	
+	/**小伙伴 401-410 */
+	LINK_TYPE_ATTACK(401,"增加攻击"),
+	LINK_TYPE_SPEED(402,"增加速度"),
+	LINK_TYPE_HP(403,"增加生命"),
+	LINK_TYPE_HA(404,"增加生命&攻击"),
+	LINK_TYPE_AS(405,"增加攻击&速度"),
+	LINK_TYPE_HS(4066,"增加生命&速度"),
+	LINK_TYPE_ALL(407,"增加所有属性"),
+	/** 501- 510 */
+	GET_TYPE_TEN_RECRUIT(501,"十连抽五星卡"),
+	GET_TYPE_NOVICE_RECRUIT(501,"新手抽卡"),
+	GET_TYPE_ROBOT(501,"机器人送卡范围"),
+	/**签到奖励类型 511- 515 */
+	LOGIN_TYPE_REWARD_BASE(511,"单月签到基础奖励"),
+	LOGIN_TYPE_REWARD_BASE_2(512,"双月签到基础奖励"),
+	LOGIN_TYPE_REWARD_EXTRA(513,"单月签到额外奖励"),
+	LOGIN_TYPE_REWARD_EXTRA_2(514,"双月签到额外奖励"),
+	
+	/** 等级礼包 */
+	ACT_REWARD_LEVEL(516,"等级礼包"),
+	
+	/** 每日任务类型 700- 750 */
+	SWEEP_SCENE_COMMON(700,"扫荡副本"),
+	KILL_BOSS(701,"击败BOSS"),
+	JOIN_TOURNAMENT(702,"参加比武"),
+	JOIN_TOURNAMENT_WIN(703,"比武战胜对手"),
+	PASS_MANY_PEOPLE_WAR_WIN(704,"完成多人副本并获胜"),
+	RECRUIT(705,"招募武将"),
+	RECRUIT_GCOIN(706,"使用高级招募"),
+	CARD_LEVEL_UP(707,"使用高级招募"),
+	EQUIPMENT_LEVEL_UP(708,"提升装备等级"),
+	OPEN_BOX(709,"开启宝箱"),
+	USE_PHYSICAL(710,"使用体力丹"),
+	USE_ENDURANCE(711,"使用耐力丹"),
+	
+	TASK_COMPLETE_TYPE_REWARD(712,"任务奖励"),
+	TASK_NODE_TYPE_REWARD(713,"任务节点奖励"),
+	
+	RECHARGE_TYPE_COMMON(720,"普通充值"),
+	RECHARGE_TYPE_MONTHCARD(721,"月卡充值"),
+	RECHARGE_TYPE_PAGE(722,"Android网页充值"),
+
+	/** 矿山 */
+	MINE_SILVER_ORE_1(810,"银矿1"),
+    MINE_SILVER_ORE_2(811,"银矿2"),
+    MINE_SILVER_ORE_3(812,"银矿3"),
+    MINE_GOLD_ORE_1(813,"金矿1"),
+    MINE_GOLD_ORE_2(814,"金矿2"),
+    MINE_GOLD_ORE_3(815,"金矿3"),
+	
+	/**新手引导 1000 -- 1100 */
+	GUIDE_CHANGE_EQUIPMENT(988,"完成更换装备"),
+	GUIDE_WEAR_MOUNT(989,"完成穿戴坐骑"),
+	GUIDE_WEAR_SHOES(990,"完成穿戴靴子"),
+	GUIDE_WEAR_CLOTHES(991,"完成穿戴衣服"),
+	GUIDE_WEAR_HAT(992,"完成穿戴帽子"),
+	GUIDE_WEAR_JEWELRY(993,"完成穿戴饰品"),
+	GUIDE_WEAR_WEAPON(994,"完成穿戴武器"),
+	GUIDE_CHAPTER_REWARD_1(995,"领取第一章通关奖励"),
+    GUIDE_CHAPTER_REWARD_2(996,"领取第二章通关奖励"),
+    GUIDE_CHAPTER_REWARD_3(997,"领取第三章通关奖励"),
+    GUIDE_CHAPTER_REWARD_4(998,"领取第四章通关奖励"),
+    GUIDE_CHAPTER_REWARD_5(999,"领取第五章通关奖励"),
+	GUIDE_TYPE_NICKENAME(1000,"玩家名称"),
+	GUIDE_SELECT_FIRST_HERO(1001,"选择初始武将"),
+	GUIDE_RECRUIT_0(1002,"招募第一名武将"),
+	GUIDE_RECURIT_1(1003,"招募第二名武将"),
+	GUIDE_FORMATION_HERO_0(1004,"第一名武将上阵"),
+	GUIDE_FORMATION_HERO_1(1005,"第二名武将上阵"),
+	GUIDE_SELL_INIT_HEROS(1006,"出售武将"),
+	GUIDE_FORMATION(1007,"阵容引导"),
+	GUIDE_WEAR_EQUIPMENT(1008,"穿戴装备"),
+	GUIDE_UPGRADE_EQUIPMENT(1009,"装备升级"),
+	GUIDE_UPGRADE_HERO(1010,"武将升级"),
+	GUIDE_EVOLVE_HERO(1011,"武将进化"),
+	GUIDE_PVP(1012,"比武引导"),
+	GUIDE_MULTI_LEVEL(1013,"多人副本"),
+	GUIDE_SELECT_INIT_HERO(1014,"阵容站位"),
+	GUIDE_WEAR_EQUIPMENT_AND_CARD(1015,"穿戴装备 和修改武将"),
+	GUIDE_PASS_SCENE_REWARD(1016,"通关奖励领取"),
+	GUIDE_FINISH_1_1(1062,"三星通关1-1"),
+	GUIDE_FINISH_1_2(1063,"三星通关1-2"),
+	GUIDE_FINISH_1_3(1064,"三星通关1-3"),
+	GUIDE_CHANGE_HERO(1065,"更换武将"),
+	
+	
+	LOG_GCOIN(1020,"金币"),
+	LOG_SCOIN(1021,"银币"),
+	LOG_CARD(1022,"卡牌"),
+	LOG_EQUIPMENT(1023,"装备"),
+	LOG_PROP(1024,"道具"),
+	
+	LOG_CARD_CHIP(1025,"卡牌碎片"),
+	LOG_EQUIPMENT_CHIP(1026,"装备碎片"),
+	LOG_CARD_COMPOSITE(1027,"卡牌合成"),
+	LOG_EQUIPMENT_COMPOSITE(1028,"卡牌合成"),
+	LOG_EXCHANGE_PVPPOINT(1029,"兑换消耗功勋点"),
+	LOG_CARD_UPLEVEL(1030,"卡牌升级"),
+	LOG_EQUIPMENT_UPLEVEL(1031,"装备升级"),
+	LOG_CARD_SELL(1032,"卡牌出售"),
+	LOG_EQUIPMENT_SELL(1033,"装备出售"),
+	LOG_GCOIN_RECRUIT_CARD(1034,"黄金招募卡牌"),
+	LOG_GCOIN_RECRUIT_CARD_WASTE_GCOIN(1035,"黄金招募卡牌消耗金币"),
+	LOG_USE_PROP(1036,"使用道具"),
+	LOG_PLAYER_LEVEL(1037,"角色等级提升"),
+	
+	//2|3星过关
+	PASS_CONDITION_TYPE_HP_MORETHAN(1050,"剩余血量大于"),
+	PASS_CONDITION_TYPE_CARD_BASE_ID(1051,"阵容中有某个武将(援军不计)"),
+	PASS_CONDITION_TYPE_CARD_STAR(1052,"阵容中有某星级武将(援军不计)"),
+	PASS_CONDITION_TYPE_EQUIPMENT_ID(1052,"有某件装备"),
+	
+	// 分享奖励
+	SHARE_REWARD_TYPE_SCENE_PASS(1070,"通关奖励分享奖励"),
+	SHARE_REWARD_TYPE_LOGIN_EVERYDAY(1071,"每日登陆分享奖励（对应前20天）"),
+	SHARE_REWARD_TYPE_LOGIN_EXTRA(1072,"每日登陆分享奖励（对应20天之后）"),
+	
+	SKIP_TYPE_JUMP_RECHARGE(1100,"跳转充值"),
+	SKIP_TYPE_JUMP_SHOP(1101,"跳转商店"),
+	SKIP_TYPE_JUMP_ACTIVITY_SCENE(1102,"跳转活动副本"),
+	SKIP_TYPE_JUMP_RECRUIT(1103,"跳转抽卡"),
+	SKIP_TYPE_LIST_GET_LEVEL(1104,"列表类(等级)"),
+	SKIP_TYPE_LIST_GET_SEVENDAYS(1105,"列表类(7天礼包)"),
+	
+	ITEM_TYPE_COMMON(1200,""),
+	ITEM_TYPE_RECHARGE_1(1201,""),
+	ITEM_TYPE_RECHARGE_2(1202,""),
+	ITEM_TYPE_RECHARGE_3(1203,""),
+	ITEM_TYPE_RECHARGE_4(1204,""),
+	ITEM_TYPE_RECHARGE_5(1205,""),
+	ITEM_TYPE_RECHARGE_6(1206,""),
+	ITEM_TYPE_RECHARGE_7(1207,""),
+	
+	SHOW_TO_TYPE_EMAIL(1300,""),
+	SHOW_TO_TYPE_FIXED(1301,""),
+	
+	/**
+	 * 锦囊类型 270-280
+	 */
+	ATTACK_PACK(270,"攻击型"),
+	FUNCTION_PACK(271,"功能型"),
+	DEFENSE_PACK(272,"防御型"),
+	
+	REFRESH_WHOLE(273,"整体刷新"),
+	REFRESH_PERSONAL(274,"个人刷新"),
+	
+	
+	// 广告
+	SKIP_TYPE_RECHARGE(280,"充值"),
+	SKIP_TYPE_RECRUIT(281,"抽卡");
+
+	
+	private final int code;
+	private final String comments;
+
+	EnumFieldPjz(final int code, final String comments) {
+		this.code = code;
+		this.comments = comments;
+	}
+
+	public static EnumFieldPjz fromCode(final int code) {
+		for (EnumFieldPjz s : EnumFieldPjz.values()) {
+			if (s.code == code) {
+				return s;
+			}
+		}
+		return null;
+	}
+	
+	public static EnumFieldPjz fromName(final String name) {
+        for (EnumFieldPjz s : EnumFieldPjz.values()) {
+            if (s.name().equals(name)) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+	public int getCode() {
+		return code;
+	}
+
+	public String getComments() {
+		return toString();
+	}
+
+	public String toString() {
+		return comments;
+	}
+}

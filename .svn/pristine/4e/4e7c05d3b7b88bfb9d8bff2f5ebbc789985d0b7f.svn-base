@@ -1,0 +1,3 @@
+# Configure dynamic database number and priority 
+server.database.dynamic.dbnum=2
+server.database.dynamic.prioritylist=100,0

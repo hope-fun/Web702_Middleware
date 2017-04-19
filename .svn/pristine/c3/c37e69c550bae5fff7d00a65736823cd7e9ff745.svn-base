@@ -1,0 +1,29 @@
+channel文件svn路径:
+hopefun\Web702_Middleware\Web708_Code_Server\trunk\mobigame-login-service\src\main\webapp\resources\js\channel
+
+channelId对应渠道：
+1--魔方网（未接入）
+2--9G SDK
+3--Play68 SDK
+4--JinWan SDK（未接入）改->润趣微信平台
+5--多禾(钱宝H5)二月兰 SDK
+6--美图秀秀Forgame SDK
+7--MyCard SDK（未接入）
+8--淘米就醬玩 SDK（未接入）
+9--jy SDK
+10--Y5平台
+11--群黑
+12--火舞
+13--nicegame（接入中）
+需要代理到47.90.37.164或h5bar.com:7001访问测试地址
+塔防三国测试地址：http://www.nicegame.com.tw/game/detail/sgtf 或 http://www.nicegame.com.tw/game/play/10895/1
+转发示例地址和参数：ih5hi.com?game=799&channel=13&uid=1234567890&partner=nicegame
+
+14--gametree（接入中）
+username: h5test@gametree.tw
+password: h5testing
+塔防三国测试地址：http://gametree.tw/game/h5/td3go/s1
+
+666--IOS
+777--Android（未接入）
+888--快速登录
